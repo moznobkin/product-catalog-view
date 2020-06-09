@@ -1,4 +1,6 @@
 FROM golang:1.12.7-alpine3.10 AS builder
+RUN apk add git
+
 RUN mkdir -p /go/src/github.com/moznobkin/product-catalog-view
 COPY . /go/src/github.com/moznobkin/product-catalog-view
 WORKDIR /go/src/github.com/moznobkin/product-catalog-view
