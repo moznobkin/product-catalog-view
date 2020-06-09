@@ -2,7 +2,7 @@ FROM golang:1.12.7-alpine3.10 AS builder
 RUN mkdir -p /go/src/github.com/moznobkin/product-catalog-view
 COPY . /go/src/github.com/moznobkin/product-catalog-view
 WORKDIR /go/src/github.com/moznobkin/product-catalog-view
-RUN go get github.com/gorilla/mux 
+ENV GO111MODULE=on
 RUN go build -v -o /go/bin/product-catalog-view
 
 FROM alpine:3.10
