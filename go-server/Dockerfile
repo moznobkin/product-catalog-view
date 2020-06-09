@@ -9,3 +9,5 @@ LABEL maintainer="Michael Oznobkin <oznobkin@gmail.com>"
 COPY --from=builder /go/bin/product-catalog-view /usr/bin/product-catalog-view
 EXPOSE 8080 8080
 ENTRYPOINT ["/usr/bin/product-catalog-view"]
+
+
